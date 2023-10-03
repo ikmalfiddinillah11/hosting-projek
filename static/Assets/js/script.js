@@ -132,7 +132,7 @@ var message = document.getElementById("message");
 btn.addEventListener("click", sendData);
 
 function sendData() {
-  fetch("http://localhost:4000/home", {
+  fetch("https://registry.npmjs.org/has-proto/-/has-proto-1.0.1.tgz/home", {
     method: "POST",
     body: JSON.stringify({
       rating: rating.value,
@@ -144,7 +144,7 @@ function sendData() {
   })
     .then(function (response) {
       if (response.ok) {
-        return response.redirect("http://localhost:4000/");
+        return response.redirect("https://registry.npmjs.org/has-proto/-/has-proto-1.0.1.tgz/");
       }
       return Promise.reject(response);
     })
@@ -153,7 +153,7 @@ function sendData() {
     });
 }
 
-$.getJSON("http://localhost:4000/testimoni", function (data) {
+$.getJSON("https://registry.npmjs.org/has-proto/-/has-proto-1.0.1.tgz/testimoni", function (data) {
   let item = data.data;
   let currentIndex = 0;
 
